@@ -58,26 +58,29 @@
       padding: 10px 0;
     }
     .nav-container a {
-      text-decoration: none;
-      color: #00247d;
-      font-weight: bold;
-      padding: 8px 12px;
-      border-radius: 4px;
-      transition: all 0.2s ease;
-      position: relative;
-    }
-    /* Hover effect for all except Home */
-    .nav-container a:not(.home):hover {
-      background-color: #00247d;
-      color: white;
-    }
-    .nav-container a:not(.home)::after {
-      content: " ▼";
-      font-size: 0.7em;
-    }
-    .nav-container a.home::after {
-      content: "";
-    }
+  text-decoration: none;
+  color: #00247d;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+/* Hover effect for all links */
+.nav-container a:hover {
+  background-color: #00247d;
+  color: white;
+}
+
+/* Dropdown arrow only for non-Home links */
+.nav-container a:not(.home)::after {
+  content: " ▼";
+  font-size: 0.7em;
+}
+.nav-container a.home::after {
+  content: "";
+}
   </style>
 </head>
 <body>
