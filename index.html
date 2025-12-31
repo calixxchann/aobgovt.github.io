@@ -15,42 +15,23 @@
       background-color: #00247d;
       color: white;
       padding: 20px 0;
-    }
-    /* content container inside header */
-    .header-container {
-      max-width: 900px;
-      margin: 0 auto;
       text-align: center;
     }
     .header-container img {
-      height: 120px;
+      height: 220px;
       margin-bottom: 10px;
-    }
-    .header-container h1 {
-      margin: 0 0 10px 0;
-    }
-    nav {
-      margin-top: 10px;
-    }
-    nav a {
-      margin: 0 20px;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
     }
     main {
       max-width: 900px;
       margin: 20px auto;
       padding: 20px;
-      background-color: #FFFFFF; /* sections white */
-      color: #000000; /* text blue */
+      background-color: #FFFFFF;
+      color: #000000;
       border-radius: 5px;
     }
+    /* section headings */
     h2 {
-      color: #00247d; /* blue headings */
+      color: #00247d;
     }
     section {
       margin-bottom: 30px;
@@ -63,21 +44,53 @@
       margin-top: 30px;
       font-size: 14px;
     }
+
+    /* Navigation below header */
+    .nav-container {
+      max-width: 900px;
+      margin: 20px auto;
+      display: flex;
+      gap: 20px;
+      justify-content: flex-start;
+      padding: 10px 0;
+    }
+    .nav-container a {
+      text-decoration: none;
+      color: #00247d;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+    /* Hover effect for all except Home */
+    .nav-container a:not(.home):hover {
+      background-color: #00247d;
+      color: white;
+    }
+    /* Optional dropdown effect */
+    .nav-container a:not(.home)::after {
+      content: " ▼";
+      font-size: 0.7em;
+    }
+    .nav-container a.home::after {
+      content: "";
+    }
   </style>
 </head>
 <body>
   <header>
-    <div class="header-container">
-    <img src="253184.png" alt="Government of Australia Logo" style="height:220px; margin-bottom:10px;">
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="ministries.html">Ministries</a>
-        <a href="news.html">News & Media</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
+    <img src="253184.png" alt="Government of Australia Logo">
   </header>
+
+  <!-- Navigation below header -->
+  <div class="nav-container">
+    <a href="index.html" class="home">Home</a>
+    <a href="about.html">About</a>
+    <a href="ministries.html">Ministries</a>
+    <a href="news.html">News & Media</a>
+    <a href="contact.html">Contact</a>
+  </div>
 
   <main>
     <section>
